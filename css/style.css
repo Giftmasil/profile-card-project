@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    white-space: nowrap;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: 1.5rem "Nunito", sans-serif;
+    background-color: #475569;
+    min-height: 100vh;
+    background-image: radial-gradient(whitesmoke, #475569);
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    position: sticky;
+    background-color: #1e293b;
+    color: whitesmoke;
+    text-align: center;
+}
+
+header {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+}
+
+
+nav {
+    background-color: whitesmoke;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a:any-link {
+    color: #4f2323;
+}
+
+nav :is(a:visited, a:hover) {
+    filter: brightness(300%) ;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+.card {
+    scroll-margin-top: 8rem;
+    width: min(100%, 350px);
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 1em;
+    background-color: rgb(221, 228, 234);
+
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card figure {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.card img {
+    border: 6px double black;
+    border-radius: 50%;
+}
+
+.card figure figcaption {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 1rem;
+    text-align: center;
+}
+
+.card p q {
+    font-weight: 600;
+}
+
+@media screen and (min-width: 556px) {
+    main {
+        justify-content: center;
+        flex-flow: row wrap;
+        padding: 1rem;
+    }
+
+    .card {
+        width: min(100%, 400px);
+    }
+}
+
+@media screen and (min-width: 768px){
+    nav {
+        display: none;
+    }
+    
+    .card {
+        width: min(100%, 325px);
+    }
+    .card figure {
+        flex-flow: column-reverse;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .card {
+        width: min(100%, 400px);
+    }
+}
